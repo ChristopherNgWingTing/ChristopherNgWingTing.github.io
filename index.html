@@ -72,8 +72,28 @@
     @media only screen and (max-width: 600px) {
         .workGrid {
             grid-template-columns: auto;
+            gap: 3rem
         }
     }
+
+    .Desktop {
+        display: block;
+    }
+
+    .Mobile {
+        display: none;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .Desktop {
+            display: none;
+        }
+
+        .Mobile {
+            display: block;
+        }
+    }
+
 
     .workItem {
         cursor: url(images/cursor.png), auto;
@@ -105,7 +125,7 @@
 
     @media only screen and (max-width: 600px) {
         .workItem__title {
-            display: none;
+            margin-top: 1rem;
         }
     }
 
@@ -126,39 +146,48 @@
         <section>
             <ul class="workGrid">
                 <li class="workItem">
-                    <img class="fittingImage" src="images/CALENDAR.png"/>
+                    <img class="fittingImage Desktop" src="images/CALENDAR.png"/>
+                    <img class="fittingImage Mobile" src="images/1-mobile.png"/>
                     <p class="workItem__title">CALENDAR</p>
                 </li>
                 <li class="workItem">
-                    <img class="fittingImage" src="images/WELCOME TO ENGLAND.png"/>
+                    <img class="fittingImage Desktop" src="images/WELCOME TO ENGLAND.png"/>
+                    <img class="fittingImage Mobile" src="images/2-mobile.png"/>
                     <p class="workItem__title">WELCOME TO ENGLAND</p>
                 </li>
                 <li class="workItem">
-                    <img class="fittingImage" src="images/ABC’S TIME.png"/>
+                    <img class="fittingImage Desktop" src="images/ABC’S TIME.png"/>
+                    <img class="fittingImage Mobile" src="images/3-mobile.png"/>
                     <p class="workItem__title">ABC'S TIME</p>
                 </li>
                 <li class="workItem">
-                    <img class="fittingImage" src="images/SEASONS.png"/>
+                    <img class="fittingImage Desktop" src="images/SEASONS.png"/>
+                    <img class="fittingImage Mobile" src="images/4-mobile.png"/>
                     <p class="workItem__title">SEASONS</p>
                 </li>
                 <li class="workItem">
-                    <img class="fittingImage" src="images/SPORT TIME!.png"/>
+                    <img class="fittingImage Desktop" src="images/SPORT TIME!.png"/>
+                    <img class="fittingImage Mobile" src="images/5-mobile.png"/>
                     <p class="workItem__title">SPORT TIME!</p>
                 </li>
                 <li class="workItem">
-                    <img class="fittingImage" src="images/AFFICHE DE  CLASSE.png"/>
+                    <img class="fittingImage Desktop" src="images/AFFICHE DE  CLASSE.png"/>
+                    <img class="fittingImage Mobile" src="images/6-mobile.png"/>
                     <p class="workItem__title">AFFICHE DE CLASSE</p>
                 </li>
                 <li class="workItem">
-                    <img class="fittingImage" src="images/MAP.jpg"/>
+                    <img class="fittingImage Desktop" src="images/MAP.jpg"/>
+                    <img class="fittingImage Mobile" src="images/7-mobile.png"/>
                     <p class="workItem__title">TOUR D'EUROPE</p>
                 </li>
                 <li class="workItem">
-                    <img class="fittingImage" src="images/LA FEE DES MATHS.png"/>
+                    <img class="fittingImage Desktop" src="images/LA FEE DES MATHS.png"/>
+                    <img class="fittingImage Mobile" src="images/8-mobile.png"/>
                     <p class="workItem__title">LA FEE DES MATHS</p>
                 </li>
                 <li class="workItem">
-                    <img class="fittingImage" src="images/PLOOF.png"/>
+                    <img class="fittingImage Desktop" src="images/PLOOF.png"/>
+                    <img class="fittingImage Mobile" src="images/9-mobile.png"/>
                     <p class="workItem__title">PLOOF!</p>
                 </li>
             </ul>
