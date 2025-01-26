@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nais sketching</title>
+</head>
+<style>
+    .portfolioHeader {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .headerImage {
+        object-fit: contain;
+        height: 12rem;
+        margin-left: 2rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .headerImage {
+            margin-left: 3rem;
+            height: 12rem;
+        }
+    }
+
+    .navigationList {
+        margin: 0;
+        list-style-type: none;
+        display: flex;
+        gap: 3rem;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        justify-content: center;
+        font-size: 1.1rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .navigationList {
+            flex-direction: column;
+            gap: 1rem;
+            text-align: center;
+        }
+    }
+
+    .navigationElement {
+        color: #4a4a4a;
+        transition: color 0.25s ease, scale 0.5s ease;
+        text-decoration: none;
+    }
+
+    .navigationElement:hover, .navigationElement.active {
+        color: #FFA600;
+        scale: 1.075;
+        cursor: pointer;
+    }
+
+    .fittingImage {
+        object-fit: contain;
+        width: 100%;
+    }
+
+    .aboutContainer {
+        margin: 3rem auto 0 auto;
+        padding: 3rem;
+        display: flex;
+        gap: 2rem;
+        max-width: 1100px;
+    }
+
+    @media only screen and (max-width: 750px) {
+        .aboutContainer {
+            flex-direction: column;
+        }
+    }
+    
+    .aboutHello {
+        max-width: 8rem;
+    }
+
+    .aboutContentContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .aboutContainer__paragraph {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 1rem;
+        margin: 0 0 0 0.75rem;
+        letter-spacing: 1px;
+    }
+
+</style>
+<body>
+    <header class="portfolioHeader">
+        <img class="headerImage" src="images/LOGO-animation.gif"/>
+        <nav class="navigation">
+            <ul class="navigationList">
+                <li><a class="navigationElement active" href="about.html">ABOUT</a></li>
+                <li><a class="navigationElement" href="index.html">WORK</a></li>
+                <li><a class="navigationElement" href="illustrations.html">ILLUSTRATIONS</a></li>
+                <li><a class="navigationElement" href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="aboutContainer"">
+            <section class="aboutImageContainer">
+                <img class="aboutImage fittingImage" src="images/me.gif"/>
+            </section>
+            <section class="aboutContentContainer">
+                <img class="aboutHello fittingImage" src="images/HELLO.png"/>
+                <p class="aboutContainer__paragraph">I’m Anais NG, a Mauritian full-time illustrator and graphic designer. </p>
+                <p class="aboutContainer__paragraph">I primarily focus on creating engaging educational content for children, combining creativity with a love for storytelling to inspire young minds.</p>
+                <p class="aboutContainer__paragraph">In addition to illustration, I’m skilled in coding and video editing, which allows me to bring a versatile approach to my creative projects. While my work often centers around children's content, I have a soft spot for manga, drawing inspiration from its dynamic style and captivating narratives to add a unique flair to my art.</p>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nais sketching</title>
+</head>
+<style>
+    .portfolioHeader {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .headerImage {
+        object-fit: contain;
+        height: 12rem;
+        margin-left: 2rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .headerImage {
+            margin-left: 3rem;
+            height: 12rem;
+        }
+    }
+
+    .navigationList {
+        margin: 0;
+        list-style-type: none;
+        display: flex;
+        gap: 3rem;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        justify-content: center;
+        font-size: 1.1rem;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .navigationList {
+            flex-direction: column;
+            gap: 1rem;
+            text-align: center;
+        }
+    }
+
+    .navigationElement {
+        color: #4a4a4a;
+        transition: color 0.25s ease, scale 0.5s ease;
+        text-decoration: none;
+    }
+
+    .navigationElement:hover, .navigationElement.active {
+        color: #FFA600;
+        scale: 1.075;
+        cursor: pointer;
+    }
+
+    .fittingImage {
+        object-fit: contain;
+        width: 100%;
+    }
+
+    .workGrid {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        list-style-type: none;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .workGrid {
+            grid-template-columns: auto;
+        }
+    }
+
+    .workItem {
+        cursor: url(images/cursor.png), auto;
+        position: relative;
+    }
+
+    .workItem::before {
+        content:" ";
+        position: absolute;
+        transition: background-color 0.25s linear;
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    .workItem:hover::before {
+        content:" ";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.6);
+    }
+
+    .workItem__title {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 1rem;
+        text-align: center;
+        margin: 0;
+        color: #444;
+    }
+</style>
+<body>
+    <header class="portfolioHeader">
+        <img class="headerImage" src="images/LOGO-animation.gif"/>
+        <nav class="navigation">
+            <ul class="navigationList">
+                <li><a class="navigationElement" href="about.html">ABOUT</a></li>
+                <li><a class="navigationElement active" href="index.html">WORK</a></li>
+                <li><a class="navigationElement" href="illustrations.html">ILLUSTRATIONS</a></li>
+                <li><a class="navigationElement" href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <ul class="workGrid">
+                <li class="workItem">
+                    <img class="fittingImage" src="images/CALENDAR.png"/>
+                    <p class="workItem__title">CALENDAR</p>
+                </li>
+                <li class="workItem">
+                    <img class="fittingImage" src="images/WELCOME TO ENGLAND.png"/>
+                    <p class="workItem__title">WELCOME TO ENGLAND</p>
+                </li>
+                <li class="workItem">
+                    <img class="fittingImage" src="images/ABC’S TIME.png"/>
+                    <p class="workItem__title">ABC'S TIME</p>
+                </li>
+                <li class="workItem">
+                    <img class="fittingImage" src="images/SEASONS.png"/>
+                    <p class="workItem__title">SEASONS</p>
+                </li>
+                <li class="workItem">
+                    <img class="fittingImage" src="images/SPORT TIME!.png"/>
+                    <p class="workItem__title">SPORT TIME!</p>
+                </li>
+                <li class="workItem">
+                    <img class="fittingImage" src="images/AFFICHE DE  CLASSE.png"/>
+                    <p class="workItem__title">AFFICHE DE CLASSE</p>
+                </li>
+                <li class="workItem">
+                    <img class="fittingImage" src="images/MAP.jpg"/>
+                    <p class="workItem__title">TOUR D'EUROPE</p>
+                </li>
+                <li class="workItem">
+                    <img class="fittingImage" src="images/LA FEE DES MATHS.png"/>
+                    <p class="workItem__title">LA FEE DES MATHS</p>
+                </li>
+                <li class="workItem">
+                    <img class="fittingImage" src="images/PLOOF.png"/>
+                    <p class="workItem__title">PLOOF!</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
