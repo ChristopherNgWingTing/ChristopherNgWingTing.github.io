@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nais sketching</title>
+    <title>Naissketching</title>
 </head>
 <style>
+    *,*::before, *::after {
+        box-sizing: border-box;
+    }
+
     .portfolioHeader {
         display: flex;
         flex-direction: column;
@@ -94,7 +98,6 @@
         }
     }
 
-
     .workItem {
         cursor: url(images/cursor.png), auto;
         position: relative;
@@ -113,6 +116,12 @@
         height: 100%;
         position: absolute;
         background-color: rgba(255, 255, 255, 0.6);
+    }
+
+    @media only screen and (max-width: 600px) {
+        .workItem:hover::before {
+            background-color: rgba(255, 255, 255, 0);
+        }
     }
 
     .workItem__title {
